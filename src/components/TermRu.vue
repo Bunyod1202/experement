@@ -841,7 +841,10 @@
                 п/п
               </th>
               <th>Наименование, марка,модель</th>
-              <th>Идентификационный <br />(серийный) номер</th>
+              <th>
+                Идентификационный (серийный)<br />
+                номер
+              </th>
               <th>Стоимость</th>
             </tr>
             <tr>
@@ -1012,7 +1015,6 @@ export default {};
         display: block !important;
         margin-top: 40px;
         display: flex;
-
         .title {
           margin-bottom: 30px;
         }
