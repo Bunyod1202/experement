@@ -1100,6 +1100,17 @@ export default {};
         margin-left: 30px;
       }
     }
+    .text {
+      table,
+      .th {
+        margin: 0 auto;
+        width: 50%;
+        height: 150px;
+        border: 1px solid black;
+        border-collapse: collapse;
+        text-align: center;
+      }
+    }
   }
   .container1 {
     padding: 50px 20px;
