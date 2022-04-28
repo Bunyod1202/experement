@@ -1,6 +1,6 @@
 <template>
   <div class="q-pa-md">
-    <div class="">1. СУБЪЕКТ КРЕДИТНОЙ ИНФОРМАЦИИ</div>
+    <div class="">user_data</div>
     <q-table
       :rows="rows"
       :columns="columns"
@@ -8,7 +8,7 @@
       hide-bottom
       :rows-per-page-options="[0]"
     />
-    <div class="">2. СКОРИНГ КИАЦ</div>
+    <div class="">Ruyxat</div>
     <q-table
       :rows="rows1"
       :columns="columns1"
@@ -16,7 +16,7 @@
       hide-bottom
       :rows-per-page-options="[0]"
     />
-    <div class="">3. ОБЩИЙ ОБЗОР (ОТКРЫТЫЕ + ЗАКРЫТЫЕ)</div>
+    <div class="">Katm passport</div>
     <q-table
       :rows="rows2"
       :columns="columns1"
@@ -47,52 +47,51 @@ const columns = [
 const rows = [
   {
     name: "first_name",
-    first_name: "SHERZOD",
+    calories: "first_name",
   },
   {
     name: "last_name",
-    last_name: " SULTANBAYEV",
+    calories: " last_name",
   },
   {
     name: "sur_name",
-    sur_name: "SARVAR O‘G‘LI",
+    calories: "sur_name",
   },
   {
     name: "inn",
-    inn: "123456789",
+    calories: "inn",
   },
   {
     name: "pinfl",
-    pinfl: "33103940270022",
+    calories: "pinfl",
   },
   {
     name: "bio_passport_serial",
-    bio_passport_serial: "AA",
+    calories: "bio_passport_serial",
   },
   {
     name: "bio_passport_number",
-    bio_passport_number: "1637173",
+    calories: "bio_passport_number",
   },
   {
     name: "bio_passport_issue_date",
-    bio_passport_issue_date: "2013-05-28 00:00:00",
+    calories: "bio_passport_issue_date",
   },
   {
     name: "bio_passport_expire_date",
-    bio_passport_expire_date: "2013-05-28 00:00:00",
+    calories: "bio_passport_expire_date",
   },
   {
     name: "bio_passport_whom_given",
-    bio_passport_whom_given: "МИРЗО-УЛУГБЕКСКИЙ РУВД ГОРОДА ТАШКЕНТА",
+    calories: "bio_passport_whom_given",
   },
   {
     name: "birht_date",
-    birht_date: " 1994-03-31 00:00:00",
+    calories: " birht_date",
   },
   {
     name: "address",
-    address:
-      " г. Ташкент, Янгихаётский район, мас. Спутник 22, Дустлик МСГ, 101- Дом, 992- Квартира",
+    calories: " address",
   },
 ];
 
@@ -114,22 +113,116 @@ const columns1 = [
 
 const rows1 = [
   {
-    id: 12,
-    credit_id: "4656-08",
-    amount: 4325345,
-    duration: 9,
-    name: "Otabek Sabirov",
-    passport: "AB1298511",
-    tin: "123456789",
-    credit_status: "Активный",
-    contract_date: "2020-12-01",
-    overdue_days: 0,
-    merchant_id: 1,
-    merchant_name: "Crediton",
+    name: "id",
+    calories: "id",
+  },
+  {
+    name: "credit_id",
+    calories: "credit_id",
+  },
+  {
+    name: "amount",
+    calories: "amount",
+  },
+  {
+    name: "duration",
+    calories: "duration",
+  },
+  {
+    name: "name",
+    calories: "name",
+  },
+  {
+    name: "passport",
+    calories: "passport",
+  },
+  {
+    name: "tin",
+    calories: "tin",
+  },
+  {
+    name: "credit_status",
+    calories: "credit_status",
+  },
+  {
+    name: "contract_date",
+    calories: "contract_date",
+  },
+  {
+    name: "overdue_days",
+    calories: "overdue_days",
+  },
+  {
+    name: "merchant_id",
+    calories: "merchant_id",
+  },
+  {
+    name: "merchant_name",
+    calories: "merchant_name",
   },
 ];
 
 const rows2 = [
+  {
+    name: "Document",
+    calories: "Document",
+  },
+  {
+    name: "Document",
+    calories: "Document",
+  },
+  {
+    name: "Document",
+    calories: "Document",
+  },
+  {
+    name: "Document",
+    calories: "Document",
+  },
+  {
+    name: "Document",
+    calories: "Document",
+  },
+  {
+    name: "Document",
+    calories: "Document",
+  },
+  {
+    name: "Document",
+    calories: "Document",
+  },
+  {
+    name: "Document",
+    calories: "Document",
+  },
+  {
+    name: "Document",
+    calories: "Document",
+  },
+  {
+    name: "Document",
+    calories: "Document",
+  },
+  {
+    name: "Document",
+    calories: "Document",
+  },
+  {
+    name: "Document",
+    calories: "Document",
+  },
+  {
+    name: "Document",
+    calories: "Document",
+  },
+  {
+    name: "Document",
+    calories: "Document",
+  },
+  {
+    name: "Document",
+    calories: "Document",
+  },
   {
     Document: "AC0356918",
     SurnameLatin: "AGZAMXODJAYEV",
