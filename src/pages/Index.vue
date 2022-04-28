@@ -6,7 +6,7 @@
 
 <script>
 import { defineComponent } from "vue";
-import TermRu from "src/components/TermRu.vue";
+import TermRu from "src/components/Table.vue";
 export default defineComponent({
   name: "PageIndex",
   components: {
