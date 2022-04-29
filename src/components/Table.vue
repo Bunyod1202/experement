@@ -1,8 +1,11 @@
 <template>
   <div class="q-pa-md">
+    <pre>
+      {{ elektr }}
+    </pre>
     <div class="">user_data</div>
     <q-table
-      :rows="rows"
+      :rows="userData"
       :columns="columns"
       hide-header
       hide-bottom
@@ -10,16 +13,93 @@
     />
     <div class="">Ruyxat</div>
     <q-table
-      :rows="rows1"
-      :columns="columns1"
+      :rows="ruyxat"
+      :columns="columns"
       hide-header
       hide-bottom
       :rows-per-page-options="[0]"
     />
     <div class="">Katm passport</div>
     <q-table
-      :rows="rows2"
-      :columns="columns1"
+      :rows="katmPassport"
+      :columns="columns"
+      hide-header
+      hide-bottom
+      :rows-per-page-options="[0]"
+    />
+    <div class="">
+      address
+      <div class="">AddressRes</div>
+      <q-table
+        :rows="AddressRes"
+        :columns="columns"
+        hide-header
+        hide-bottom
+        :rows-per-page-options="[0]"
+      />
+      <div class="">AddressReg</div>
+      <q-table
+        :rows="AddressRes"
+        :columns="columns"
+        hide-header
+        hide-bottom
+        :rows-per-page-options="[0]"
+      />
+      <div class="">Address</div>
+      <q-table
+        :rows="address"
+        :columns="columns"
+        hide-header
+        hide-bottom
+        :rows-per-page-options="[0]"
+      />
+    </div>
+    <div class="">Elektr true</div>
+    <q-table
+      :rows="elektr1"
+      :columns="columns"
+      hide-header
+      hide-bottom
+      :rows-per-page-options="[0]"
+    />
+    <q-table
+      :rows="elektr1"
+      :columns="columns"
+      hide-header
+      hide-bottom
+      :rows-per-page-options="[0]"
+    />
+    <q-table
+      :rows="elektr2"
+      :columns="elektr11"
+      hide-bottom
+      :rows-per-page-options="[0]"
+    />
+    <div class="">Elektr folse</div>
+    <q-table
+      :rows="elektrelse"
+      :columns="columns"
+      hide-header
+      hide-bottom
+      :rows-per-page-options="[0]"
+    />
+    <q-table
+      :rows="elektr1else"
+      :columns="columns"
+      hide-header
+      hide-bottom
+      :rows-per-page-options="[0]"
+    />
+    <q-table
+      :rows="elektr2else"
+      :columns="elektr11"
+      hide-bottom
+      :rows-per-page-options="[0]"
+    />
+    <div class="">suv</div>
+    <q-table
+      :rows="water"
+      :columns="columns"
       hide-header
       hide-bottom
       :rows-per-page-options="[0]"
@@ -43,8 +123,46 @@ const columns = [
     sortable: true,
   },
 ];
-
-const rows = [
+const elektr11 = [
+  {
+    name: "calories",
+    align: "left",
+    label: "Год",
+    field: (row) => row.name,
+    format: (val) => `${val}`,
+  },
+  {
+    name: "calories",
+    align: "left",
+    label: "месяц",
+    field: (row) => row.calories,
+  },
+  {
+    name: "calories",
+    align: "left",
+    label: "текущий долг",
+    field: (row) => row.fat,
+  },
+  {
+    name: "calories",
+    align: "left",
+    label: "непогашенный долг",
+    field: (row) => row.carbs,
+  },
+  {
+    name: "calories",
+    align: "left",
+    label: "пересмотренный долг",
+    field: (row) => row.protein,
+  },
+  {
+    name: "calories",
+    align: "left",
+    label: "штрафы",
+    field: (row) => row.sodium,
+  },
+];
+const userData = [
   {
     name: "first_name",
     calories: "first_name",
@@ -94,24 +212,7 @@ const rows = [
     calories: " address",
   },
 ];
-
-const columns1 = [
-  {
-    name: "calories",
-    align: "left",
-    field: (row) => row.name,
-    format: (val) => `${val}`,
-  },
-  {
-    name: "calories",
-    align: "left",
-    label: "Calories",
-    field: "calories",
-    sortable: true,
-  },
-];
-
-const rows1 = [
+const ruyxat = [
   {
     name: "id",
     calories: "id",
@@ -161,91 +262,371 @@ const rows1 = [
     calories: "merchant_name",
   },
 ];
+const katmPassport = [
+  {
+    name: "Document",
+    calories: "Document",
+  },
+  {
+    name: "SurnameLatin",
+    calories: "SurnameLatin",
+  },
+  {
+    name: "NameLatin",
+    calories: "NameLatin",
+  },
+  {
+    name: "MiddleNameLatin",
+    calories: "MiddleNameLatin",
+  },
+  {
+    name: "SurnameEng",
+    calories: "SurnameEng",
+  },
+  {
+    name: "NameEng",
+    calories: "NameEng",
+  },
+  {
+    name: "BirthDate",
+    calories: "BirthDate",
+  },
+  {
+    name: "BirthPlaceId",
+    calories: "BirthPlaceId",
+  },
+  {
+    name: "BirthCountry",
+    calories: "BirthCountry",
+  },
+  {
+    name: "BirthCountryId",
+    calories: "BirthCountryId",
+  },
+  {
+    name: "LiveStatus",
+    calories: "LiveStatus",
+  },
+  {
+    name: "Nationality",
+    calories: "Nationality",
+  },
+  {
+    name: "NationalityId",
+    calories: "NationalityId",
+  },
+  {
+    name: "Citizenship",
+    calories: "Citizenship",
+  },
+  {
+    name: "CitizenshipId",
+    calories: "CitizenshipId",
+  },
+  {
+    name: "Sex",
+    calories: "Sex",
+  },
+  {
+    name: "DocGivePlace",
+    calories: "DocGivePlace",
+  },
+  {
+    name: "DocGivePlaceId",
+    calories: "DocGivePlaceId",
+  },
+  {
+    name: "DateBeginDocument",
+    calories: "DateBeginDocument",
+  },
+  {
+    name: "DateEndDocument",
+    calories: "DateEndDocument",
+  },
+  {
+    name: "Result",
+    calories: "Result",
+  },
+  {
+    name: "ResultMessage",
+    calories: "ResultMessage",
+  },
+];
+const AddressRes = [
+  {
+    name: "Country",
+    calories: "Country",
+  },
+  {
+    name: "Region",
+    calories: "Region",
+  },
+  {
+    name: "District",
+    calories: "District",
+  },
+  {
+    name: "Address",
+    calories: "Address",
+  },
+  {
+    name: "RegDate",
+    calories: "RegDate",
+  },
+  {
+    name: "Cadastre",
+    calories: "Cadastre",
+  },
+  {
+    name: "Result",
+    calories: "Result",
+  },
+  {
+    name: "ResultMessage",
+    calories: "ResultMessage",
+  },
+];
+const AddressReg = [
+  {
+    name: "Country",
+    calories: "Country",
+  },
+  {
+    name: "Region",
+    calories: "Region",
+  },
+  {
+    name: "District",
+    calories: "District",
+  },
+  {
+    name: "Address",
+    calories: "Address",
+  },
+  {
+    name: "RegDate",
+    calories: "RegDate",
+  },
+  {
+    name: "Cadastre",
+    calories: "Cadastre",
+  },
+  {
+    name: "Result",
+    calories: "Result",
+  },
+  {
+    name: "ResultMessage",
+    calories: "ResultMessage",
+  },
 
-const rows2 = [
   {
-    name: "Document",
-    calories: "Document",
-  },
-  {
-    name: "Document",
-    calories: "Document",
-  },
-  {
-    name: "Document",
-    calories: "Document",
-  },
-  {
-    name: "Document",
-    calories: "Document",
-  },
-  {
-    name: "Document",
-    calories: "Document",
-  },
-  {
-    name: "Document",
-    calories: "Document",
-  },
-  {
-    name: "Document",
-    calories: "Document",
-  },
-  {
-    name: "Document",
-    calories: "Document",
-  },
-  {
-    name: "Document",
-    calories: "Document",
-  },
-  {
-    name: "Document",
-    calories: "Document",
-  },
-  {
-    name: "Document",
-    calories: "Document",
-  },
-  {
-    name: "Document",
-    calories: "Document",
-  },
-  {
-    name: "Document",
-    calories: "Document",
-  },
-  {
-    name: "Document",
-    calories: "Document",
-  },
-  {
-    name: "Document",
-    calories: "Document",
-  },
-  {
-    Document: "AC0356918",
-    SurnameLatin: "AGZAMXODJAYEV",
-    NameLatin: "BUNYOD",
-    MiddleNameLatin: "ZAXITJON O‘G‘LI",
-    SurnameEng: "AGZAMKHODJAEV",
-    NameEng: "BUNYOD",
-    BirthDate: "2002-11-07T00:00:00+05:00",
-    BirthPlaceId: "",
-    BirthCountry: "УЗБЕКИСТАН",
-    BirthCountryId: null,
-    LiveStatus: "1",
-    Nationality: "УЗБЕК/УЗБЕЧКА",
-    NationalityId: 44,
-    Citizenship: "УЗБЕКИСТАН",
-    CitizenshipId: 182,
-    Sex: "1",
-    DocGivePlace: "АККУРГАНСКИЙ РОВД ТАШКЕНТСКОЙ ОБЛАСТИ",
-    DocGivePlaceId: 27206,
-    DateBeginDocument: "2018-11-28T00:00:00+05:00",
-    DateEndDocument: "2028-11-27T00:00:00+05:00",
     Result: "05000",
     ResultMessage: "Successful",
+  },
+];
+const address = [
+  {
+    name: "Result",
+    calories: "Result",
+  },
+  {
+    name: "ResultMessage",
+    calories: "ResultMessage",
+  },
+];
+const elektr = [
+  {
+    name: "state",
+    calories: "state",
+  },
+  {
+    name: "message",
+    calories: "message",
+  },
+];
+const elektr1 = [
+  {
+    name: "name",
+    calories: "name",
+  },
+];
+const elektr2 = [
+  {
+    calories: "mar",
+    name: "2021",
+    fat: "0",
+    carbs: "23",
+    protein: "6.0",
+    sodium: "337",
+  },
+  {
+    calories: "apr",
+    name: "",
+    fat: "0",
+    carbs: "23",
+    protein: "6.0",
+    sodium: "337",
+  },
+  {
+    calories: "may",
+    name: "",
+    fat: "0",
+    carbs: "23",
+    protein: "6.0",
+    sodium: "337",
+  },
+  {
+    calories: "jun",
+    name: "",
+    fat: "0",
+    carbs: "23",
+    protein: "6.0",
+    sodium: "337",
+  },
+  {
+    calories: "jul",
+    fat: "0",
+    carbs: "23",
+    protein: "6.0",
+    sodium: "337",
+    name: "",
+  },
+  {
+    calories: "aug",
+    name: "",
+    fat: "0",
+    carbs: "23",
+    protein: "6.0",
+    sodium: "337",
+  },
+  {
+    calories: "sep",
+    name: "",
+    fat: "0",
+    carbs: "23",
+    protein: "6.0",
+    sodium: "337",
+  },
+  {
+    calories: "oct",
+    name: "",
+    fat: "0",
+    carbs: "23",
+    protein: "6.0",
+    sodium: "337",
+  },
+  {
+    calories: "nov",
+    name: "",
+    fat: "0",
+    carbs: "23",
+    protein: "6.0",
+    sodium: "337",
+  },
+  {
+    calories: "dec",
+    name: "",
+    fat: "0",
+    carbs: "23",
+    protein: "6.0",
+    sodium: "337",
+  },
+];
+const elektr2else = [
+  {
+    calories: "",
+    name: "2021",
+    fat: "",
+    carbs: "",
+    protein: "",
+    sodium: "",
+  },
+];
+const elektrelse = [
+  {
+    name: "state",
+    calories: "state",
+  },
+  {
+    name: "message",
+    calories: "message",
+  },
+];
+const elektr1else = [
+  {
+    name: "name",
+    calories: "name",
+  },
+];
+const water = [
+  {
+    name: "ResultCode",
+    calories: "ResultCode",
+  },
+  {
+    name: "result_message",
+    calories: " result_message",
+  },
+  {
+    name: "abonentfio",
+    calories: "abonentfio",
+  },
+  {
+    name: "licshet",
+    calories: "licshet",
+  },
+  {
+    name: "passport_number",
+    calories: "passport_number",
+  },
+  {
+    name: "pinfl",
+    calories: "pinfl",
+  },
+  {
+    name: "kadastrnumber",
+    calories: "kadastrnumber",
+  },
+  {
+    name: "phone",
+    calories: "phone",
+  },
+  {
+    name: "regions_name",
+    calories: "regions_name",
+  },
+  {
+    name: "areas_name",
+    calories: "areas_name",
+  },
+  {
+    name: "mahalla_name",
+    calories: " mahalla_name",
+  },
+  {
+    name: "streets_name",
+    calories: " streets_name",
+  },
+  {
+    name: "address",
+    calories: " address",
+  },
+  {
+    name: "company_name",
+    calories: " company_name",
+  },
+  {
+    name: "contract_date",
+    calories: " contract_date",
+  },
+  {
+    name: "current_liver_count",
+    calories: " current_liver_count",
+  },
+  {
+    name: "fmal_saldo",
+    calories: " fmal_saldo",
   },
 ];
 
@@ -253,19 +634,32 @@ export default {
   setup() {
     return {
       columns,
-      rows,
-      rows1,
-      rows2,
+      userData,
+      ruyxat,
+      katmPassport,
+      AddressRes,
+      AddressReg,
+      address,
+      elektr,
+      elektr1,
+      elektr11,
+      elektr2,
+      elektrelse,
+      elektr1else,
+      elektr2else,
+      water,
     };
   },
 };
 </script>
 <style lang="scss">
 .q-table {
+  th {
+    border: 0.5px solid black;
+  }
   tbody {
     tr {
       td {
-        width: 50%;
         border: 0.5px solid black;
       }
     }
