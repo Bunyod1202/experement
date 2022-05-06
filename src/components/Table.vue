@@ -2,7 +2,7 @@
   <div class="q-pa-md">
     <div class="">user_data</div>
     <q-table
-      :rows="userData"
+      :rows="user_data"
       :columns="columns"
       hide-header
       hide-bottom
@@ -18,7 +18,7 @@
     />
     <div class="">Katm passport</div>
     <q-table
-      :rows="katmPassport"
+      :rows="katm_passport"
       :columns="columns"
       hide-header
       hide-bottom
@@ -26,17 +26,17 @@
     />
     <div class="">
       address
-      <div class="">AddressRes</div>
+      <div class="">address_res</div>
       <q-table
-        :rows="AddressRes"
+        :rows="address_res"
         :columns="columns"
         hide-header
         hide-bottom
         :rows-per-page-options="[0]"
       />
-      <div class="">AddressReg</div>
+      <div class="">address_reg</div>
       <q-table
-        :rows="AddressRes"
+        :rows="address_res"
         :columns="columns"
         hide-header
         hide-bottom
@@ -68,7 +68,7 @@
     />
     <q-table
       :rows="elektr2"
-      :columns="elektr11"
+      :columns="elektr_columns"
       hide-bottom
       :rows-per-page-options="[0]"
     />
@@ -113,7 +113,7 @@
       <div class="">INCOME</div>
     <q-table
       :rows="inps"
-      :columns="inpsColumns"
+      :columns="inps_columns"
       hide-bottom
       :rows-per-page-options="[0]"
     />
@@ -162,7 +162,7 @@
       <div class="">contingent_liability</div>
         <q-table
       :rows="contingent_liability"
-      :columns="contingent_liabilityColumns"
+      :columns="contingent_liability_columns"
       hide-bottom
       :rows-per-page-options="[0]"
     />
@@ -177,7 +177,7 @@
     <div class="">subscription</div>
       <q-table
       :rows="subscription"
-      :columns="subscriptionColumns"
+      :columns="subscription_columns"
       hide-bottom
       :rows-per-page-options="[0]"
     />
@@ -208,7 +208,7 @@
      <div class="">credit_request</div>
       <q-table
       :rows="credit_request"
-      :columns="credit_requestColumns"
+      :columns="credit_request_columns"
       hide-bottom
       :rows-per-page-options="[0]"
     />
@@ -223,7 +223,7 @@
     <div class="">blacklist_info</div>
       <q-table
       :rows="blacklist_info"
-      :columns="blacklist_infoColumns"
+      :columns="blacklist_info_columns"
       hide-bottom
       :rows-per-page-options="[0]"
     />
@@ -238,7 +238,7 @@
 		<div class="">blacklist_info</div>
       <q-table
       :rows="claim_wo_contract"
-      :columns="claim_wo_contractColumns"
+      :columns="claim_wo_contract_columns"
       hide-bottom
       :rows-per-page-options="[0]"
     />
@@ -260,18 +260,18 @@
       hide-bottom
       :rows-per-page-options="[0]"
     />
-		<div class="">OverduePrincipalsDays</div>
+		<div class="">overdue_principals_days</div>
 			  <q-table
-      :rows="OverduePrincipalsDays"
-      :columns="OverduePrincipalsDaysColumns"
+      :rows="overdue_principals_days"
+      :columns="overdue_principals_days_columns"
 
       hide-bottom
       :rows-per-page-options="[0]"
     />
-			<div class="">ClaimWoContractsInfo</div>
+			<div class="">claim_wo_contracts_info</div>
 			  <q-table
-      :rows="ClaimWoContractsInfo"
-      :columns="ClaimWoContractsInfoColumns"
+      :rows="claim_wo_contracts_info"
+      :columns="claim_wo_contractsInfo_columns"
 
       hide-bottom
       :rows-per-page-options="[0]"
@@ -280,14 +280,11 @@
 		<div class="">get
     	  <q-table
       :rows="get"
-      :columns="getColumns"
+      :columns="get_columns"
 
       hide-bottom
       :rows-per-page-options="[0]"
     />
-
-
-
 		</div>
   </div>
 </template>
@@ -308,17 +305,17 @@ const columns = [
     sortable: true,
   },
 ];
-const OverduePrincipalsDaysColumns = [
+const overdue_principals_days_columns = [
   {
     name: "calories",
     align: "left",
-		label:"OverduePrincipalsDays",
+		label:"overdue_principals_days",
     field: (row) => row.name,
     format: (val) => `${val}`,
   },
 
 ];
-const elektr11 = [
+const elektr_columns = [
   {
     name: "calories",
     align: "left",
@@ -357,7 +354,7 @@ const elektr11 = [
     field: (row) => row.sodium,
   },
 ];
-const inpsColumns = [
+const inps_columns = [
   {
     name: "calories",
     align: "left",
@@ -391,7 +388,7 @@ const inpsColumns = [
   },
 
 ];
-const contingent_liabilityColumns = [
+const contingent_liability_columns = [
   {
     name: "calories",
     align: "left",
@@ -497,7 +494,7 @@ const contingent_liabilityColumns = [
   },
 
 ];
-const credit_requestColumns = [
+const credit_request_columns = [
   {
     name: "calories",
     align: "left",
@@ -548,7 +545,7 @@ const credit_requestColumns = [
     field: (row) => row.amount_change,
   },
 ];
-const blacklist_infoColumns = [
+const blacklist_info_columns = [
   {
     name: "calories",
     align: "left",
@@ -581,7 +578,7 @@ const blacklist_infoColumns = [
     field: (row) => row.protein,
   },
 ];
-const subscriptionColumns = [
+const subscription_columns = [
   {
     name: "calories",
     align: "left",
@@ -629,7 +626,7 @@ const subscriptionColumns = [
 
 
 ];
-const claim_wo_contractColumns = [
+const claim_wo_contract_columns = [
   {
     name: "calories",
     align: "left",
@@ -683,7 +680,7 @@ const claim_wo_contractColumns = [
 
 
 ];
-const ClaimWoContractsInfoColumns = [
+const claim_wo_contractsInfo_columns = [
   {
     name: "calories",
     align: "left",
@@ -737,7 +734,7 @@ const ClaimWoContractsInfoColumns = [
 
 
 ];
-const getColumns = [
+const get_columns = [
   {
     name: "calories",
     align: "left",
@@ -770,7 +767,7 @@ const getColumns = [
     field: (row) => row.protein,
   },
 ];
-const userData = [
+const user_data = [
   {
     name: "first_name",
     calories: "first_name",
@@ -870,7 +867,7 @@ const ruyxat = [
     calories: "merchant_name",
   },
 ];
-const katmPassport = [
+const katm_passport = [
   {
     name: "Document",
     calories: "Document",
@@ -960,7 +957,7 @@ const katmPassport = [
     calories: "ResultMessage",
   },
 ];
-const AddressRes = [
+const address_res = [
   {
     name: "Country",
     calories: "Country",
@@ -994,7 +991,7 @@ const AddressRes = [
     calories: "ResultMessage",
   },
 ];
-const AddressReg = [
+const address_reg = [
   {
     name: "Country",
     calories: "Country",
@@ -1752,30 +1749,29 @@ const send = [
     name: "ContingentLiabilitiesQty",
   },
 ]
-const OverduePrincipalsDays = [
+const overdue_principals_days = [
    {
 
-    name: "OverduePrincipalsDays",
+    name: "overdue_principals_days",
   },
 	{
 
-    name: "OverduePrincipalsDays",
+    name: "overdue_principals_days",
   },
 	{
 
-    name: "OverduePrincipalsDays",
+    name: "overdue_principals_days",
   },
 	{
 
-    name: "OverduePrincipalsDays",
+    name: "overdue_principals_days",
   },
 	{
-    name: "OverduePrincipalsDays",
+    name: "overdue_principals_days",
   },
 
 ]
-
-const ClaimWoContractsInfo = [
+const claim_wo_contracts_info = [
   {
    calories: "rejection_date",
     name: "summa",
@@ -1800,22 +1796,30 @@ export default {
   setup() {
     return {
       columns,
-      userData,
+      contingent_liability_columns,
+      credit_request_columns,
+      subscription_columns,
+		  overdue_principals_days_columns,
+			get_columns,
+      blacklist_info_columns,
+			claim_wo_contractsInfo_columns,
+			claim_wo_contract_columns,
+      inps_columns,
+      user_data,
       ruyxat,
-      katmPassport,
-      AddressRes,
-      AddressReg,
+      katm_passport,
+      address_res,
+      address_reg,
       address,
       elektr,
       elektr1,
-      elektr11,
+      elektr_columns,
       elektr2,
       elektrelse,
       elektr1else,
       elektr2else,
       water,
       mib,
-      inpsColumns,
       inps,
       incomes_period,
       sysinfo,
@@ -1823,28 +1827,20 @@ export default {
       client,
       notification,
       contingent_liability,
-      contingent_liabilityColumns,
       overview,
-      subscriptionColumns,
       subscription,
       scorring,
       sysinfos,
       credit_request,
-      credit_requestColumns,
       clients,
       blacklist_info,
-      blacklist_infoColumns,
 			open_contracts,
-			claim_wo_contractColumns,
 			claim_wo_contract,
 			contracts,
 			credit_requests,
 			send,
-			OverduePrincipalsDays,
-			OverduePrincipalsDaysColumns,
-			ClaimWoContractsInfo,
-			ClaimWoContractsInfoColumns,
-			getColumns,
+			overdue_principals_days,
+			claim_wo_contracts_info,
 			get
     };
   },
